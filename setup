@@ -1,0 +1,28 @@
+#!/bin/bash
+# OpenTeamStack setup — symlink team skills into Claude Code
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+SKILLS_DIR="${HOME}/.claude/skills"
+
+echo "=== OpenTeamStack Setup ==="
+echo ""
+
+mkdir -p "$SKILLS_DIR"
+
+# Symlink each team skill into ~/.claude/skills/
+for skill in team-dev-and-qa; do
+  if [ -d "$SCRIPT_DIR/$skill" ]; then
+    ln -sfn "$SCRIPT_DIR/$skill" "$SKILLS_DIR/$skill"
+    echo "  ✓ /$skill linked"
+  fi
+done
+
+echo ""
+echo "=== Setup Complete ==="
+echo ""
+echo "Available teams:"
+echo "  /team-dev-and-qa  — Dev + QA agent team (build & test end-to-end)"
+echo ""
+echo "Usage: /team-dev-and-qa <describe what you want built>"
+echo ""

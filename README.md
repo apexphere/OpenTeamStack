@@ -5,7 +5,9 @@ Installable agent team skills for Claude Code. Spawn coordinated multi-agent tea
 ## Install
 
 ```bash
-claude plugin install github.com/apexphere/OpenTeamStack
+git clone https://github.com/apexphere/OpenTeamStack.git
+cd OpenTeamStack
+./setup
 ```
 
 ## Available Teams
@@ -27,22 +29,23 @@ Spawns a **Developer** and **QA Engineer** working together toward a goal.
 
 ## Creating New Teams
 
-Add a new skill directory under `skills/`:
+Add a new skill directory at the project root:
 
 ```
-skills/
-  team-your-team/
-    SKILL.md
+team-your-team/
+  SKILL.md
 ```
 
-The `SKILL.md` frontmatter must include `name: team-your-team` and a `description` explaining when to use it. See existing teams for examples.
+Then add the skill name to the `for` loop in `setup` and re-run `./setup`.
 
-## Local Development
+## Project Structure
 
-Test the plugin locally:
-
-```bash
-claude --plugin-dir ./OpenTeamStack
+```
+OpenTeamStack/
+├── setup                    # Symlink skills into Claude Code
+├── team-dev-and-qa/
+│   └── SKILL.md             # Dev + QA team skill
+└── README.md
 ```
 
 ## License
