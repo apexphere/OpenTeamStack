@@ -1,5 +1,5 @@
 {
-  "name": "open-teams",
+  "name": "open-team-stack",
   "description": "Installable agent team skills for Claude Code. Spawn coordinated multi-agent teams with a single /team-* command.",
   "version": "0.1.0",
   "author": {
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/megan/OpenTeams"
+    "url": "https://github.com/apexphere/OpenTeamStack"
   },
   "license": "MIT"
 }

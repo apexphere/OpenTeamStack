@@ -1,11 +1,11 @@
-# OpenTeams
+# OpenTeamStack
 
 Installable agent team skills for Claude Code. Spawn coordinated multi-agent teams with a single `/team-*` command.
 
 ## Install
 
 ```bash
-claude plugin install github.com/megan/OpenTeams
+claude plugin install github.com/apexphere/OpenTeamStack
 ```
 
 ## Available Teams
@@ -42,7 +42,7 @@ The `SKILL.md` frontmatter must include `name: team-your-team` and a `descriptio
 Test the plugin locally:
 
 ```bash
-claude --plugin-dir ./OpenTeams
+claude --plugin-dir ./OpenTeamStack
 ```
 
 ## License
